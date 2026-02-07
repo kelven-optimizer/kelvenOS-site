@@ -30,9 +30,7 @@ O site foi construído com foco em estética "Gamer/Cyberpunk" e performance:
 
 ## 🚀 Como Usar
 
-1. Clone este repositório.
-2. Abra o arquivo `index.html` em seu navegador preferido.
-3. Acompanhe a contagem regressiva para o lançamento!
+1. Acompanhe a contagem regressiva para o lançamento!
 
 ## 👥 Créditos
 
