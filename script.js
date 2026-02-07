@@ -23,9 +23,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const mEl = document.getElementById('minutes');
         const sEl = document.getElementById('seconds');
 
-        if(hEl) hEl.innerText = hours < 10 ? '0' + hours : hours;
-        if(mEl) mEl.innerText = minutes < 10 ? '0' + minutes : minutes;
-        if(sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
+        if (hEl) hEl.innerText = hours < 10 ? '0' + hours : hours;
+        if (mEl) mEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if (sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
     };
 
     updateCountdown();
@@ -112,5 +112,33 @@ document.addEventListener('DOMContentLoaded', () => {
             card.style.transform = 'rotateX(0) rotateY(0) scale(1)';
             glow.style.opacity = '0';
         });
+    }
+    // ----------------------------------------------------
+    // 4. Hero Slideshow
+    // ----------------------------------------------------
+    const slides = document.querySelectorAll('.slide-image');
+    let currentSlide = 0;
+
+    if (slides.length > 1) {
+        setInterval(() => {
+            // Mark current as exit
+            slides[currentSlide].classList.remove('active');
+            slides[currentSlide].classList.add('exit');
+
+            const prevSlide = currentSlide;
+
+            // Move to next
+            currentSlide = (currentSlide + 1) % slides.length;
+
+            // Prepare next slide (remove exit if it was there from previous cycle)
+            slides[currentSlide].classList.remove('exit');
+            slides[currentSlide].classList.add('active');
+
+            // Cleanup exit class from the previous slide after transition is done (1s)
+            setTimeout(() => {
+                slides[prevSlide].classList.remove('exit');
+            }, 1000);
+
+        }, 4000); // 4 seconds per slide
     }
 });
