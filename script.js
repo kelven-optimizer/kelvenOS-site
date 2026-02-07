@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     // 1. Countdown Logic
     // ----------------------------------------------------
-    const launchDate = new Date('2026-02-07T13:30:00').getTime();
+    const launchDate = new Date('2026-02-07T14:00:00').getTime();
 
     const updateCountdown = () => {
         const now = new Date().getTime();
@@ -10,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (distance < 0) {
             document.querySelector('.countdown-container').innerHTML =
-                '<div class="time-box" style="width:100%"><span style="color: var(--secondary);">JÁ DISPONÍVEL!</span></div>';
+                '<div class="time-box" style="width:100%"><span style="color: var(--secondary);">SISTEMA ONLINE - ACESSO LIBERADO</span></div>';
+            document.getElementById('suspense-message').style.display = 'none';
             return;
         }
 
@@ -18,13 +19,44 @@ document.addEventListener('DOMContentLoaded', () => {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
-        document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
-        document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+        const hEl = document.getElementById('hours');
+        const mEl = document.getElementById('minutes');
+        const sEl = document.getElementById('seconds');
+
+        if(hEl) hEl.innerText = hours < 10 ? '0' + hours : hours;
+        if(mEl) mEl.innerText = minutes < 10 ? '0' + minutes : minutes;
+        if(sEl) sEl.innerText = seconds < 10 ? '0' + seconds : seconds;
     };
 
     updateCountdown();
     setInterval(updateCountdown, 1000);
+
+    // ----------------------------------------------------
+    // Suspense Messages
+    // ----------------------------------------------------
+    const messages = [
+        "Iniciando protocolos de otimização...",
+        "Calibrando núcleos do sistema...",
+        "Verificando integridade da rede...",
+        "Sincronizando banco de dados global...",
+        "Aguardando liberação do servidor...",
+        "Otimizando threads de processamento...",
+        "Quase lá..."
+    ];
+
+    const messageEl = document.getElementById('suspense-message');
+    let msgIndex = 0;
+
+    if (messageEl) {
+        setInterval(() => {
+            messageEl.style.opacity = '0';
+            setTimeout(() => {
+                msgIndex = (msgIndex + 1) % messages.length;
+                messageEl.innerText = messages[msgIndex];
+                messageEl.style.opacity = '1';
+            }, 500);
+        }, 3000);
+    }
 
 
     // ----------------------------------------------------

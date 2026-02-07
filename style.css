@@ -421,6 +421,18 @@ h1 {
     color: var(--glass-border);
 }
 
+#suspense-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--secondary);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    height: 1.5rem; /* Min height to prevent layout shift */
+}
+
 /* Footer */
 footer {
     border-top: 1px solid var(--glass-border);
