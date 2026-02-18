@@ -1,41 +1,82 @@
+# KT Optimizer VIP 2.0 - Website
 
-# 🚀 KelvenOS - KtX Optimizer
+Marketing website showcasing the KT Optimizer VIP 2.0 system optimization tool.
 
-Bem-vindo ao repositório oficial do site de lançamento do **KtX Optimizer**. Este projeto apresenta a landing page moderna e de alta performance desenvolvida para promover a ferramenta definitiva de otimização de sistema.
+## 🚀 Features
 
-## 🌟 Sobre o Projeto
+- **Modern Design**: Futuristic, gaming-focused aesthetic with glassmorphism and aurora gradients
+- **Interactive Demo**: Explore all 8 optimization modules with live previews
+- **Responsive**: Fully responsive design for all devices
+- **Animated**: Smooth animations powered by Framer Motion
+- **Performance**: Built with Vite for lightning-fast load times
 
-O **KtX Optimizer** é uma ferramenta focada em:
-- **Boost de FPS**: Maximização de quadros por segundo em jogos.
-- **Latência Zero**: Otimização de rede para inputs instantâneos.
-- **Limpeza Profunda**: Remoção de arquivos inúteis e otimização de RAM e CPU.
+## 🛠️ Tech Stack
 
-Este site serve como a porta de entrada para os usuários conhecerem e adquirirem a ferramenta.
+- **Framework**: React 19
+- **Build Tool**: Vite 7
+- **Styling**: Tailwind CSS v3
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Exo 2 (headers) + Open Sans (body)
 
-## 🎨 Design e Recursos
+## 📦 Installation
 
-O site foi construído com foco em estética "Gamer/Cyberpunk" e performance:
-- **Design Responsivo**: Funciona perfeitamente em desktop e mobile.
-- **Animações Fluidas**: Efeitos de fade-in, scroll reveal e tilt 3D nas imagens.
-- **Contagem Regressiva**: Timer dinâmico para o lançamento oficial.
-- **Sistema de Suspense**: Mensagens rotativas que criam hype para o lançamento ("Iniciando protocolos...", "Otimizando núcleos...").
+```bash
+# Install dependencies
+npm install
 
-## 🛠️ Tecnologias Utilizadas
+# Run development server
+npm run dev
 
-- **HTML5**: Estrutura semântica.
-- **CSS3**: Estilização avançada com variáveis, Grid/Flexbox, e animações keyframe.
-- **JavaScript**: Lógica para o countdown, observadores de scroll e efeitos interativos.
-- **Font Awesome**: Ícones vetoriais.
-- **Google Fonts**: Tipografia moderna (Outfit).
+# Build for production
+npm run build
 
-## 🚀 Como Usar
+# Preview production build
+npm run preview
+```
 
-1. Acompanhe a contagem regressiva para o lançamento!
+## 🌐 Development
 
-## 👥 Créditos
+The development server will start at `http://localhost:3000`
 
-- **Desenvolvimento**: kelvenapk e thurr
-- **Design**: Inspirado em interfaces modernas de otimizadores e dashboards de games.
+## 📁 Project Structure
 
----
-&copy; 2026 Todos os direitos reservados
+```
+site/
+├── public/              # Static assets
+├── src/
+│   ├── components/      # React components
+│   │   ├── Navbar.jsx
+│   │   ├── Hero.jsx
+│   │   ├── SocialProof.jsx
+│   │   ├── Features.jsx
+│   │   ├── InteractiveDemo.jsx
+│   │   ├── Pricing.jsx
+│   │   └── Footer.jsx
+│   ├── App.jsx          # Main app component
+│   ├── main.jsx         # Entry point
+│   └── index.css        # Global styles
+├── index.html
+├── package.json
+├── vite.config.js
+└── tailwind.config.js
+```
+
+## 🎨 Design Features
+
+- **Aurora Gradient Backgrounds**: Animated gradient blobs for depth
+- **Glassmorphism Cards**: Semi-transparent cards with backdrop blur
+- **Smooth Animations**: Page transitions and hover effects
+- **Interactive Elements**: Animated counters, tab switching, hover states
+- **Gradient Text**: Eye-catching gradient text for headings
+- **Floating Elements**: Animated floating stat cards
+
+## 🔗 Links
+
+- **Main App Repository**: [github.com/kelven-optimizer/ktxoptimizer-vip](https://github.com/kelven-optimizer/ktxoptimizer-vip)
+- **Price**: R$ 30 (one-time payment)
+- **Creators**: THUR & KELVEN
+
+## 📝 License
+
+MIT License - See main repository for details
